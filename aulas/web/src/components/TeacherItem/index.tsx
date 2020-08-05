@@ -1,6 +1,6 @@
 import React from 'react';
-import whatsapp from '../../images/whatsapp.svg';
-import './styles';
+import whatsapp from '../../assets/images/icons/whatsapp.svg';
+import './styles.css';
 
 export default () => {
     return(
