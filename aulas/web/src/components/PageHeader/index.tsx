@@ -6,6 +6,7 @@ import './styles.css';
 
 interface PageHeaderProps {
     title: string;
+    description?:string;
 }
 
 
@@ -15,16 +16,17 @@ const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
         <header className="page-header">
         <div className="top-bar-container">
             <Link to="/">
-                <img src={logoImg} alt=""/>
+            <img src={backIcon} alt=""/>
             </Link>
             <Link to="/">
-            <img src={backIcon} alt=""/>
+                <img src={logoImg} alt=""/>
             </Link>
         </div>
         <div className="header-content">
             <strong>
             {props.title}
             </strong>
+    {props.description && <p>{props.description}</p> }
         {props.children}
         </div>
     </header>
